@@ -2,16 +2,19 @@ body {
     background-color: black;
 }
 
+.button-container {
+    text-align: center;
+    
+}
+
 .canvas-size-btn {
     border: none;
-    display: block;
     padding: 15px 32px;
     text-align: center;
     color: white;
     background-color: green;
     font-size: 20px;
     text-decoration: none;
-    align-content: space-evenly;
 }
 
 .container {
@@ -21,7 +24,7 @@ body {
 }
 
 .pixel {
-    border: solid white 1px;
+    border: solid white 0.7px;
 }
 
 .hover {

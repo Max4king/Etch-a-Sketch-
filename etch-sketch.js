@@ -4,15 +4,19 @@ pixel_template.classList.add("pixel");
 const resize_btn = document.querySelector(".canvas-size-btn");
 
 let size = 16;
-const pixel_size = 20;
+let pixel_size = 25;
+const max_size = 400;
 
-pixel_template.setAttribute("style", 
-`height: ${pixel_size}px; width: ${pixel_size}px`);
+
 
 // Making the grid 
 function make_grid(size) {
-    console.log(pixel_template);
+    pixel_size = Math.floor(max_size/size);
+    console.log(pixel_size);
     // Setting grid size
+    pixel_template.setAttribute("style", 
+    `height: ${pixel_size}px; width: ${pixel_size}px`);
+    
     sketch_board.setAttribute("style",
     `grid-template-columns: repeat(${size}, ${pixel_size}px);`);
     // Creating Grid
@@ -44,7 +48,7 @@ function remove_grid() {
 
 // Button setting
 resize_btn.addEventListener("click", () => {
-    let temp = parseInt(prompt("Enter the size you want(up to 100): "));
+    let temp = parseInt(prompt("Enter the size you want(up to 100): ", 16));
     if (temp > 100 || temp < 1) {
         alert("Error Not a valid number!");
         return;
