@@ -11,6 +11,7 @@ pixel_template.setAttribute("style",
 
 // Making the grid 
 function make_grid(size) {
+    console.log(pixel_template);
     // Setting grid size
     sketch_board.setAttribute("style",
     `grid-template-columns: repeat(${size}, ${pixel_size}px);`);
@@ -29,7 +30,7 @@ function make_grid(size) {
         pixel.addEventListener("mouseenter", () => {
             pixel.classList.add("hover");
         })
-    });
+    })
 
 };
 
@@ -42,7 +43,7 @@ function remove_grid() {
 // Button setting
 resize_btn.addEventListener("click", () => {
     let temp = parseInt(prompt("Enter the size you want(up to 100): "));
-    if (temp > 100 || temp < 0) {
+    if (temp > 100 || temp < 1) {
         alert("Error Not a valid number!");
         return;
     }
