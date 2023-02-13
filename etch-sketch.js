@@ -27,6 +27,8 @@ function make_grid(size) {
     const all_pixel = document.querySelectorAll(".pixel");
     
     all_pixel.forEach( (pixel) => {
+        pixel.classList.remove("hover");
+
         pixel.addEventListener("mouseenter", () => {
             pixel.classList.add("hover");
         })
