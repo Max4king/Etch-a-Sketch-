@@ -11,5 +11,7 @@ for (let i=0; i < 16; i++) {
 const all_pixel = document.querySelectorAll(".pixel");
 
 all_pixel.forEach( (pixel) => {
-    console.log("hi")
+    pixel.addEventListener("click", () => {
+        pixel.classList.add("hover");
+    })
 });
