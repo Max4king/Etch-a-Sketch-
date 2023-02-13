@@ -14,4 +14,8 @@ all_pixel.forEach( (pixel) => {
     pixel.addEventListener("mouseenter", () => {
         pixel.classList.add("hover");
     })
+    pixel.addEventListener("transitionend", (e) => {
+        if (e.propertyName !== "background-color") return;
+        pixel.classList.remove("hover");
+    });
 });
