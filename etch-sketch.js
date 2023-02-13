@@ -1,11 +1,15 @@
 const sketch_board = document.querySelector(".container");
-let pixel_block = document.createElement("div");
-pixel_block.classList.add("pixel");
+let pixel_template = document.createElement("div");
+pixel_template.classList.add("pixel");
 
 for (let i=0; i < 16; i++) {
     for (let i=0; i < 16; i++) {
-        pixel_block = pixel_block.cloneNode(true);
-        sketch_board.appendChild(pixel_block);
+        pixel_template = pixel_template.cloneNode(true);
+        sketch_board.appendChild(pixel_template);
     }
 }
-//const all_pixel = document.querySelectorAll(".pixel").length);
+const all_pixel = document.querySelectorAll(".pixel");
+
+all_pixel.forEach( (pixel) => {
+    console.log("hi")
+});
