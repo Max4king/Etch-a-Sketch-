@@ -1,10 +1,11 @@
 const sketch_board = document.querySelector(".container");
 let pixel_block = document.createElement("div");
 pixel_block.classList.add("pixel");
+
 for (let i=0; i < 16; i++) {
     for (let i=0; i < 16; i++) {
-        let pb = pixel_block.cloneNode(true);
-        sketch_board.appendChild(pb);
+        pixel_block = pixel_block.cloneNode(true);
+        sketch_board.appendChild(pixel_block);
     }
 }
-console.log(document.querySelectorAll(".pixel").length);
+//const all_pixel = document.querySelectorAll(".pixel").length);

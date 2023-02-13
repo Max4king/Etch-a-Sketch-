@@ -2,14 +2,18 @@ body {
     background-color: black;
 }
 .container {
+    padding-top: 100px;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(16, 20px);
-    grid-template-rows: repeat(16, 1fr);
 }
 
 .pixel {
     width: 20px;
     height: 20px;
     border: solid white 1px;
+}
+
+.pixel.color {
+    background-color: white;
 }
