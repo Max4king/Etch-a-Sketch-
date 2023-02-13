@@ -1,16 +1,26 @@
 body {
     background-color: black;
 }
+
+.canvas-size-btn {
+    border: none;
+    display: block;
+    padding: 15px 32px;
+    text-align: center;
+    color: white;
+    background-color: green;
+    font-size: 20px;
+    text-decoration: none;
+    align-content: space-evenly;
+}
+
 .container {
     padding-top: 100px;
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(16, 20px);
 }
 
 .pixel {
-    width: 20px;
-    height: 20px;
     border: solid white 1px;
 }
 
